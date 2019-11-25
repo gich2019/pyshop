@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% block content %}
+
+
+<H1>My shop products</H1>
+<div class="row">
+    {% for prod in product%}
+    <div class="col">
+        <div class="card" style="width: 16rem;">
+            <img class="card-img-top" src="{{prod.image_url}}"  alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{prod.name}}</h5>
+                <p class="card-text">Kshs {{prod.price}}</p>
+                <h4 class="card-test">{{prod.description}}</h4>
+                <a href="#" class="btn btn-primary">Add to Cart</a>
+
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+        <a href="http://www.google.com">Search More</a>
+</div>
+{% endblock %}
+
